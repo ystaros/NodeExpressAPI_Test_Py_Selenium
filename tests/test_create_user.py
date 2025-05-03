@@ -31,9 +31,17 @@ def test_add_user(browser):
     browser.find_element(By.ID, "age").send_keys("22")
     add_btn.click()
     user_info = wait_all_5(browser,(By.CSS_SELECTOR, "tbody>tr>td"))
+    users_count = len(wait_all_5(browser, (By.CSS_SELECTOR, "tbody>tr")))
 
+    assert users_count == 1
     assert user_info[0].text == "Lena"
     assert user_info[1].text == "Petrova"
     assert user_info[2].text == "22"
     assert len(user_info[3].text) == 36
+
+def test_fixture(delete_users):
+    pass
+
+def test_fixture_create(create_users):
+    pass
 
