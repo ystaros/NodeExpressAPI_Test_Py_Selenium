@@ -20,3 +20,5 @@ users = [
         "age": 46,
     },
 ]
+
+USER_WITH_UNIQUE_LAST_NAME = users[3].get("lastName")

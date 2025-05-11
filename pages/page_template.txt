@@ -1,0 +1,10 @@
+from pages.base_page import BasePage
+
+
+class TemplatePage(BasePage):
+    class Locator:
+        pass
+
+    def __init__(self, browser, timeout=5):
+        super().__init__(browser, timeout=timeout)
+        self.url = self.base_url + "template_url"
