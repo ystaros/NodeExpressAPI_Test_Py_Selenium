@@ -7,3 +7,9 @@ pip install requests
 pip freeze > requirements.txt
 
 pip install python-dotenv
+
+pytest // run all tests from terminal
+
+pytest -s -v tests/test_search_user_pom.py // example run one test with full path from root; "s" for print on the console; "v" show more results of test
+
+
